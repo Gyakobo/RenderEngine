@@ -10,6 +10,9 @@
 // Texture and Meshes
 //#include "../src/utils/fileutils.h"
 #include "Shader.h"
+#include "Buffer.h"
+#include "IndexBuffer.h"
+#include "VertexArray.h"
 
 // Window
 #include "Window.h"

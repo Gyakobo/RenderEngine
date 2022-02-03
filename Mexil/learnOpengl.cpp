@@ -1,14 +1,16 @@
 #include <iostream>
+#include <stdio.h>
+#include <GL/glew.h>
 #include <GLFW/glfw3.h>
 
 using namespace std;
 
 int main() {
-	GLFWwindow * window;
+	Window window;
 
-	if (glfwInit()) return -1;
+	//if (glfwInit()) return -1;
 
-	window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
+	window = glfwCreateWindow(640, 480, "Hello World");
 
 	if (!window) {
 		glfwTerminate();
@@ -17,18 +19,20 @@ int main() {
 
 	glfwMakeContextCurrent(window);
 
-	while (!glfwWindowShouldClose(window)) {
-		glClear(GL_COLOR_BUFFER_BIT);
+	while (!window.closed()) {
+		window.clear();
 
 		glBegin(GL_TRIANGLES);
+		glVertex2f(-0.5f, -0.5f);
+		glVertex2f(0.0f, 0.5f);
+		glVertex2f(0.5f, -0.5f);
+		glEnd();
+	
+		glDrawArrays(GL_triangles, 0, 3);	
 		
-		
-		glfwSwapBuffers(window);
-
-		glfwPollEvents();
+		window.update();
 	}
 
-	glfwTerminate();
 	return 0;
 }
 
