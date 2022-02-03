@@ -3,7 +3,6 @@
 using namespace std;
 
 int main(void) {
-	
 	//string file = read_file("main.cpp");
 	//cout << file << endl;
 	
