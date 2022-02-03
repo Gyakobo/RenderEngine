@@ -6,6 +6,7 @@
 using namespace std;
 
 int main() {
+#if 0	
 	Window window;
 
 	//if (glfwInit()) return -1;
@@ -32,6 +33,18 @@ int main() {
 		
 		window.update();
 	}
+
+	return 0;
+#endif
+
+	int a=3, b=4;
+
+	cout << a << " " << b << endl << "size(a) = " << sizeof(a) << ", size(b) = " << sizeof(b) << endl;
+
+	int *p=&a, *q=&b;
+
+	cout << p << " " << q << endl << "size(*p) = " << sizeof(*p) << ", size(*q) = " << sizeof(*q) << endl;
+	cout << *p << " " << *q << endl;
 
 	return 0;
 }
