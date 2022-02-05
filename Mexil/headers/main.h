@@ -8,11 +8,16 @@
 #include <GLFW/glfw3.h>
 
 // Texture and Meshes
-//#include "../src/utils/fileutils.h"
+//#include "../src/utils/fileutils.h" // Opens and Reads and can even write .txt files
 #include "Shader.h"
 #include "Buffer.h"
 #include "IndexBuffer.h"
 #include "VertexArray.h"
+
+// Render Machine
+#include "Renderer2d.h"
+#include "Renderable2D.h"
+#include "Simple2DRenderer.h"
 
 // Window
 #include "Window.h"
