@@ -8,6 +8,7 @@ VertexArray::~VertexArray() {
 	for (int i=0; i<Buffers.size(); i++) {
 		delete Buffers.at(i);
 	}
+	glDeleteVertexArrays(1, &ArrayID);
 }
 
 void VertexArray::addBuffer(Buffer* buffer, GLuint index) {

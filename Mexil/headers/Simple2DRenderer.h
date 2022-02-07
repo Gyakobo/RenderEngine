@@ -4,7 +4,7 @@
 #include <iostream>
 #include <deque>
 
-#include "Renderer2d.h"
+#include "Renderer2D.h"
 
 #include "mat4.h"
 

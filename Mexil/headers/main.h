@@ -15,7 +15,7 @@
 #include "VertexArray.h"
 
 // Render Machine
-#include "Renderer2d.h"
+#include "Renderer2D.h"
 #include "Renderable2D.h"
 #include "Simple2DRenderer.h"
 
