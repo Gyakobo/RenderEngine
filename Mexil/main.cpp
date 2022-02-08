@@ -22,8 +22,8 @@ int main(void) {
 
 
 
-	Renderable2D sprite(vec3(5, 5, 0), vec2(4, 4), vec4(1, 0, 1, 1), shader);	
-	Renderable2D sprite2(vec3(7, 1, 0), vec2(2, 3), vec4(0.5f, 0, 0.2f, 1), shader);	
+	static_sprite sprite(5, 5, 4, 4, vec4(1, 0, 1, 1), shader);	
+	static_sprite sprite2(7, 1, 2, 3, vec4(0.5f, 0, 0.2f, 1), shader);	
 	Simple2DRenderer renderer;
 
 

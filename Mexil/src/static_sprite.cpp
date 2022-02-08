@@ -1,14 +1,14 @@
 #include "../headers/static_sprite.h"
 
-static_sprite::static_sprite(float x, float y, float width, float height, vec4& color, Shader& shader) 
+static_sprite::static_sprite(float x, float y, float width, float height, const vec4& color, Shader& shader) 
 : Renderable2D(vec3(x, y, 0), vec2(width, height), color), m_Shader(shader)
 {
 	vertexArray = new VertexArray();                                               	
 	GLfloat vertices[] = {
 		0, 0, 0,
-		0, height.y, 0,
-		width.x, height.y, 0,
-		width.x, 0, 0
+		0, height, 0,
+		width, height, 0,
+		width, 0, 0
 	};          
 
 	GLfloat colors[] = {
@@ -25,7 +25,7 @@ static_sprite::static_sprite(float x, float y, float width, float height, vec4& 
 	indexBuffer = new IndexBuffer(indices, 6);
 }
 
-static_spite::~static_spite() {
+static_sprite::~static_sprite() {
 	delete vertexArray;
 	delete indexBuffer;
 }

@@ -32,11 +32,10 @@ protected:
 
 public:	
 	Renderable2D(vec3 position, vec2 size, vec4 color) 
-	: Position(position), Size(size), Color(color);	
+	: Position(position), Size(size), Color(color) {}
 
-	~Renderable2D();
+	virtual ~Renderable2D();
 
-public:
 	inline const vec3& getPosition() const { return Position; }
 	inline const vec2& getSize() const { return Size; }
 	inline const vec4& getColor() const { return Color; }

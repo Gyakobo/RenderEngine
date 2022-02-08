@@ -13,7 +13,7 @@ private:
 	VertexArray* vertexArray;
 	IndexBuffer* indexBuffer;
 public:
-	static_sprite(float x, float y, float width, float height, vec4& color, Shader& shader);
+	static_sprite(float x, float y, float width, float height, const vec4& color, Shader& shader);
 	~static_sprite();
 
 	inline const VertexArray* getVAO() const { return vertexArray; } // Gets Vertex Array    

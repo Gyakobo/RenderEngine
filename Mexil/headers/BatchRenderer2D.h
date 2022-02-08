@@ -27,7 +27,7 @@ public:
 	~BatchRenderer2D();
 
 	void submit(const Renderable2D* renderable) override;
-	void flush() override;
+	void flush() override{}
 };
 
 #endif

@@ -5,14 +5,14 @@ BatchRenderer2D::BatchRenderer2D() {
 }
 BatchRenderer2D::~BatchRenderer2D() {
 	delete IBO;
-	glDeleteBUffers(1, &VBO);
+	glDeleteBuffers(1, &VBO);
 }
 
 void BatchRenderer2D::init() {
 	glGenVertexArrays(1, &VAO);	
 	glGenBuffers(1, &VBO);
 	
-	glBIndVertexArray(VAO);
+	glBindVertexArray(VAO);
 	glBindBuffer(GL_ARRAY_BUFFER, VBO);
 	glBufferData(GL_ARRAY_BUFFER, BUFFER_SIZE, NULL, GL_DYNAMIC_DRAW);
 	glEnableVertexAttribArray(SHADER_VERTEX_INDEX);
@@ -22,8 +22,10 @@ void BatchRenderer2D::init() {
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
 	GLushort indices[INDICES_SIZE];
-		
-	for(int i=0; i < RENDERER_INDICES_SIZE; i++) {
+	
+	int offset = 0;
+	
+	for(int i=0; i < INDICES_SIZE; i++) {
 		indices[i] = offset;
 		indices[i+1] = offset + 1;
 		indices[i+2] = offset + 2;
@@ -41,7 +43,7 @@ void BatchRenderer2D::init() {
 }
 
 
-void BatchRenderer2D::submit(Renderable2D* renderable) {
+void BatchRenderer2D::submit(const Renderable2D* renderable) {
 		
 
 }
