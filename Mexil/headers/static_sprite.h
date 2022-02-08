@@ -2,6 +2,7 @@
 #define STATIC_SPRITE_H
 
 #include <iostream>
+//#include "Renderer2D.h"
 #include "Renderable2D.h"
 #include "vec4.h"
 

@@ -17,8 +17,10 @@
 // Render Machine
 #include "Renderer2D.h"
 #include "Renderable2D.h"
+#include "BatchRenderer2D.h"
 #include "Simple2DRenderer.h"
 #include "static_sprite.h"
+#include "sprite.h"
 
 // Window
 #include "Window.h"

@@ -7,8 +7,7 @@
 #include "VertexArray.h" 
 #include "IndexBuffer.h" 
 
-#include "Renderable2D.h"
-#include "Renderer2D.h"
+//#include "Renderer2D.h"
 
 #include "vec2.h" 
 #include "vec3.h" 
@@ -34,7 +33,7 @@ public:
 	Renderable2D(vec3 position, vec2 size, vec4 color) 
 	: Position(position), Size(size), Color(color) {}
 
-	virtual ~Renderable2D();
+	virtual ~Renderable2D() {}
 
 	inline const vec3& getPosition() const { return Position; }
 	inline const vec2& getSize() const { return Size; }
