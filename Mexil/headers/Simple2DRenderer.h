@@ -11,7 +11,7 @@
 
 using namespace std;
 
-class Simple2DRenderer : public Renderer2d {
+class Simple2DRenderer : public Renderer2D {
 private:
 	deque<const static_sprite*> RenderQueue;
 

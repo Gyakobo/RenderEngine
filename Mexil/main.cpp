@@ -19,12 +19,12 @@ int main(void) {
 	//shader.setUniformMat4("ml_matrix", mat4::translation(vec3(4, 3, 0)));
 	//shader.setUniformMat4("ml_matrix", mat4::translation(vec3(2, 2, 0)) * mat4::rotation(30.0f, vec3(0, 0, 1)));
 
-
-
-
-	static_sprite sprite(5, 5, 4, 4, vec4(1, 0, 1, 1), shader);	
+	/*static_sprite sprite(5, 5, 4, 4, vec4(1, 0, 1, 1), shader);	
 	static_sprite sprite2(7, 1, 2, 3, vec4(0.5f, 0, 0.2f, 1), shader);	
-	Simple2DRenderer renderer;
+	Simple2DRenderer renderer;*/
+	Sprite sprite(5, 5, 4, 4, vec4(1, 0, 1, 1));	
+	Sprite sprite2(7, 1, 2, 3, vec4(0.5f, 0, 0.2f, 1));	
+	BatchRenderer2D renderer;
 
 
 
@@ -49,8 +49,13 @@ int main(void) {
 		window.getMousePosition(x, y);
 		shader.setUniform2f("light_pos", vec2((float)(x * 16.0f / 960.0f), (float)(9.0f - y * 9.0f / 540.0f)));
 
+		renderer.begin();
+
 		renderer.submit(&sprite);
 		renderer.submit(&sprite2);
+
+		renderer.end();		
+
 		renderer.flush();
 
 		window.update();

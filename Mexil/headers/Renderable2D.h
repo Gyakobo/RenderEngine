@@ -7,8 +7,6 @@
 #include "VertexArray.h" 
 #include "IndexBuffer.h" 
 
-//#include "Renderer2D.h"
-
 #include "vec2.h" 
 #include "vec3.h" 
 #include "vec4.h" 
@@ -19,7 +17,7 @@
 using namespace std;
 
 struct VertexData {
-	vec3 vertices;
+	vec3 vertex;
 	vec4 color;
 };
 
