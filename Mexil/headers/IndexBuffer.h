@@ -11,6 +11,7 @@ private:
         GLuint BufferID;
 	GLuint Count;
 public:
+        IndexBuffer(GLuint* data, GLsizei count);
         IndexBuffer(GLushort* data, GLsizei count);
         ~IndexBuffer();
     

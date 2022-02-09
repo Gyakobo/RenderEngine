@@ -14,8 +14,14 @@ in DATA
 }fs_in;
 	
 void main() {
-	float intensity = 1.0 / length(fs_in.position.xy - light_pos);
+	float dist		= length(fs_in.position.xy - light_pos);
+	float brightness 	= dist * (-0.001);
+	float alpha		= 1.0 / (dist * 0.01);  
+	
+	float intensity 	= 1.0 / dist;
 	color = fs_in.color * intensity;	
+	
+	//color = fs_in.color * alpha + brightness;	
 }
 
 

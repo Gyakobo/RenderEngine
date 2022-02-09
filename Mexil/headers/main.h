@@ -25,6 +25,10 @@
 // Window
 #include "Window.h"
 
+// Time
+#include <time.h>
+
+
 // Math
 #include "vect.h"
 #include "mat4.h"

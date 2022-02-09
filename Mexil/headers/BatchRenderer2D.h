@@ -9,7 +9,7 @@
 #include "vec3.h"
 #include "vec4.h"
 
-#define MAX_SPRITES	10000
+#define MAX_SPRITES	60000
 #define VERTEX_SIZE 	sizeof(VertexData)
 #define SPRITE_SIZE	VERTEX_SIZE * 4 
 #define BUFFER_SIZE	SPRITE_SIZE * MAX_SPRITES

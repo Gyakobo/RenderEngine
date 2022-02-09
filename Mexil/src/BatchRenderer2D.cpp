@@ -21,7 +21,7 @@ void BatchRenderer2D::init() {
 	glVertexAttribPointer(SHADER_COLOR_INDEX, 4, GL_FLOAT, GL_FALSE, VERTEX_SIZE, (const GLvoid*) (3 * sizeof(GLfloat)));
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
-	GLushort indices[INDICES_SIZE];
+	GLuint indices[INDICES_SIZE];
 	
 	int offset = 0;
 	
@@ -86,7 +86,7 @@ void BatchRenderer2D::flush() {
 	glBindVertexArray(VAO);
 	IBO->bind();
 
-	glDrawElements(GL_TRIANGLES, IndexCount, GL_UNSIGNED_SHORT, NULL);
+	glDrawElements(GL_TRIANGLES, IndexCount, GL_UNSIGNED_INT, NULL);
 	
 	IBO->unbind();
 	glBindVertexArray(0);
