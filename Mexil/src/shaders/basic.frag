@@ -15,7 +15,7 @@ in DATA
 	
 void main() {
 	float dist		= length(fs_in.position.xy - light_pos);
-	float brightness 	= dist * (-0.001);
+	float brightness 	= dist * (-0.00001);
 	float alpha		= 1.0 / (dist * 0.01);  
 	
 	float intensity 	= 1.0 / dist;
